@@ -22,13 +22,13 @@ public class calendar {
 	public static void main(String[] args) {
 		System.out.println("Hello.Calendar");	
 		
-		System.out.println("알고싶으신 달 입력 하세요.");		
+		System.out.println("알고싶으신 달 입력 하세요........");		
 		Scanner scanner = new Scanner(System.in);
 		int month = scanner.nextInt();
 		
 		calendar cal = new calendar();
 		int day = cal.maxDayOfMonth(month);
-		//cal.calendarSample();
+		
 		System.out.printf("%d 달의 마지막 날은 %d 입니다.", month, day);
 		
 	}	
