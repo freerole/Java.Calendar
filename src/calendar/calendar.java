@@ -3,6 +3,12 @@ package calendar;
 import java.util.Scanner;
 
 public class calendar {
+	private static final int[] Max_Days = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; 
+	
+	public int maxDayOfMonth(int month){
+		return Max_Days[month - 1];
+	}
+	
 	public static void main(String[] args) {
 		System.out.println("Hello.Calendar");	
 		System.out.println(" 일  월   화  수  목   금   토");
@@ -13,12 +19,14 @@ public class calendar {
 		System.out.println("22  23  24  25  26  27  28");
 		System.out.println("29  30  31                ");
 		
-		System.out.println("알고싶으신 달 입력 하세요.");	
+		System.out.println("알고싶으신 달 입력 하세요.");		
 		Scanner scanner = new Scanner(System.in);
 		int month = scanner.nextInt();
 		
-		int[] maxDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+		calendar cal = new calendar();
+		int day = cal.maxDayOfMonth(month);
 		
-		System.out.printf("%d 월은 %d 일 까지 있습니다. \n", month, maxDays[month - 1]);
+		System.out.printf("%d 달의 마지막 날은 %d 입니다.", month, day);
+		
 	}	
 }
