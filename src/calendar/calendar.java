@@ -30,6 +30,5 @@ public class calendar {
 		int day = cal.maxDayOfMonth(month);
 		
 		System.out.printf("%d 달의 마지막 날은 %d 입니다.", month, day);
-		
 	}	
 }
